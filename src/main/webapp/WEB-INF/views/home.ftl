@@ -5,6 +5,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>明道金控</title>
     <link type="text/css" rel="stylesheet" href="../static/css/layui.css">
+    <style type="text/css">
+        .idiv {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            margin-left: 2px;
+        }
+    </style>
     <script type="text/javascript" src="../static/layui.all.js"></script>
     <script type="text/javascript" src="../static/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
@@ -38,8 +49,8 @@
         <button class="layui-btn m_l_1 statistical">统计报表</button>
     </div>
 </fieldset>
-<div style="width: 1360px;height: 100%;">
-    <img style="width: 100%;height: 100%;margin-left: 2px;" src="../static/images/homepage.jpeg" alt=""/>
+<div class="idiv">
+    <img src="../static/images/homepage.jpeg" alt="3.15"/>
 </div>
 </body>
 </html>
