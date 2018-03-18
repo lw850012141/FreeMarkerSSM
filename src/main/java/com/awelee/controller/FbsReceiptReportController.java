@@ -29,15 +29,15 @@ public class FbsReceiptReportController {
     @Autowired
     FbsReceiptReportService userService;
 
-    @RequestMapping("/list")
-    public String helloUser(Model model) {
+    @RequestMapping("/view")
+    public String view(Model model) {
         List<FbsReceiptReport> fbsReceiptReports = userService.findAllFbsReceiptReport(new FbsReceiptReportExample());
         model.addAttribute("fbsReceiptReports", fbsReceiptReports);
         return "/fbs_receipt_report";
     }
 
     @ResponseBody
-    @RequestMapping("exportExcel")
+    @RequestMapping("/exportExcel")
     public String exportExcel(Model model, HttpServletResponse response) throws IOException {
         List<FbsReceiptReport> fbsReceiptReports = userService.findAllFbsReceiptReport(new FbsReceiptReportExample());
         ExcelTool<FbsReceiptReport> util = new ExcelTool<FbsReceiptReport>(FbsReceiptReport.class);
@@ -46,7 +46,7 @@ public class FbsReceiptReportController {
         ServletOutputStream out = null;
         out = response.getOutputStream();
         util.exportExcel(fbsReceiptReports, "", 65535, out);
-        return "";
+        return "fbs_receipt_report";
     }
 
 }

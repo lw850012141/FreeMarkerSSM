@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FbsHomeController {
 
     @RequestMapping("/view")
-    public String helloUser(Model model) {
+    public String view(Model model) {
         return "/home";
     }
 

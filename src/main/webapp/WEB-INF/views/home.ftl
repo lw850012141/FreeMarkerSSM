@@ -11,19 +11,19 @@
         $(function () {
             //收据报表
             $(".receipt").on("click",function () {
-                window.location.href = "http://localhost/FreeMarkerSSM/receiptReport/list";
+                window.location.href = "http://localhost/FreeMarkerSSM/receiptReport/view";
             });
             //业务报表
             $(".business").on("click",function () {
-                window.location.href = "http://localhost/FreeMarkerSSM/receiptReport/list";
+                window.location.href = "http://localhost/FreeMarkerSSM/businessReport/view";
             });
             //业绩报表
             $(".performance").on("click",function () {
-                window.location.href = "http://localhost/FreeMarkerSSM/receiptReport/list";
+                window.location.href = "#";
             });
             //统计报表
             $(".statistical").on("click",function () {
-                window.location.href = "http://localhost/FreeMarkerSSM/receiptReport/list";
+                window.location.href = "#";
             });
         });
     </script>
@@ -38,5 +38,8 @@
         <button class="layui-btn m_l_1 statistical">统计报表</button>
     </div>
 </fieldset>
+<div style="width: 1360px;height: 100%;">
+    <img style="width: 100%;height: 100%;margin-left: 2px;" src="../static/images/homepage.jpeg" alt=""/>
+</div>
 </body>
 </html>
