@@ -24,17 +24,26 @@
     </style>
     <script type="text/javascript">
         $(function () {
+
+            //报表导出
            $(".export").on("click",function () {
-               layer.alert('导出报表',{
-                   skin: 'layui-layer-molv'
-                   ,closeBtn: 1
-                   ,btn: ['确认','取消']
-                   ,icon: 6
-                   ,yes:function(){
-                       layer.msg('yes');
-                   }
-               });
+//               layer.alert('导出报表',{
+//                   skin: 'layui-layer-molv'
+//                   ,closeBtn: 1
+//                   ,btn: ['确认','取消']
+//                   ,icon: 6
+//                   ,yes:function(){
+//                       layer.msg('导出成功');
+//                   }
+//               });
+               window.location.href = "http://localhost/FreeMarkerSSM/receiptReport/exportExcel";
            });
+
+           //报表导出
+           $(".before").on("click",function () {
+               window.location.href = document.referrer;
+           });
+
         });
     </script>
 </head>
@@ -43,6 +52,7 @@
         <legend>生成报表</legend>
         <div>
             <button class="layui-btn m_l_1 export">收据导出</button>
+            <button class="layui-btn m_l_1 before">返回</button>
         </div>
     </fieldset>
     <table class="layui-table">
